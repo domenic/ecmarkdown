@@ -77,7 +77,7 @@ Inside a paragraph, list item, or header, the following inline formatting elemen
 
 **Spec-level constants** are written as `~x~` and are translated to `<emu-const>x</emu-const>`. Spec-level constants cannot contain tildes.
 
-**Nonterminals** are written as `|x|`, `|x_opt|`, `|x[p]|`, or `|x[p]_opt|`. These are translated, respectively, into `<emu-nt>x</emu-nt>`, `<emu-nt optional>x</emu-nt>`, `<emu-nt params="p">x</emu-nt>`, or `<emu-nt params="p" optional>x</emu-nt>`. Nonterminal names can only be composed of letters and numbers. Params can be composed of anything except a closing square bracket.
+**Nonterminals** are written as `|x|`, `|x?|`, `|x[p]|`, or `|x[p]?|`. These are translated, respectively, into `<emu-nt>x</emu-nt>`, `<emu-nt optional>x</emu-nt>`, `<emu-nt params="p">x</emu-nt>`, or `<emu-nt params="p" optional>x</emu-nt>`. Nonterminal names can only be composed of letters and numbers. Params can be composed of anything except a closing square bracket. It's possible to write `_opt` instead of `?`, e.g.: `|x_opt|` instead of `|x?|` and `|x[p]_opt|` instead of `|x[p]?|`.
 
 All formats can be started following non-alphanumeric and non-whitespace characters and can be ended following any non-whitespace character. The one exception is code formats which can begin and end in any context.  For example, `my_SIMD_constructor` does not contain any variables while `_SIMD_Constructor` does.
 
